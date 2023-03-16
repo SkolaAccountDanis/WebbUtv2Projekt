@@ -1,4 +1,55 @@
 body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
     display: grid;
-    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 }
+
+p{
+    color: white;
+}
+
+#game-visual{
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#game-info{
+    grid-area: 3 / 1 / 4 / 1;
+    border-style: solid;
+    background-color: antiquewhite;
+}
+
+#game-info p{
+    color: black;
+}
+
+#buildings{
+    grid-area: 1 / 2 / 4 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#buildings img{
+    height: 35px;
+}
+
+.buildingbutton{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    border-style: solid;
+    border-color: white;
+
+}
+
+#upgrades{
+    grid-area: 1 / 3 / 3 / 3;
+}
+
+
