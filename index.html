@@ -17,32 +17,57 @@
     </div>
 
     <nav id="game-info"> 
-        <p>This is where the materials will show up</p>        
+        <span id="Allpeople">0 People</span>
+        <span id="Allstone">0 Stone</span> 
+        <span id="Allfood">0 Food</span>  
+        <span id="Allwood">0 Wood</span> 
     </nav>
 
-    <aside id="upgrades">
-        <button id="Hut">Hut</button>
-    </aside>
-    <div id="buildings">
-        <div id="cave" class="buildingbutton">
+    <section id="upgrades">
+        <div id="betterForaging" class="customUpgradebutton">
+            <p>Better Foraging</p>
+            <p id="costOfForageUpgrade">10 Food</p>
+        </div>
+        <div id="hut" class="customUpgradebutton">
+            <p>Hut</p>  
+            <p id="costOfHutUpgrade">10 Wood</p>
+        </div>
+        <div id="farm2" class="customUpgradebutton">
+            <p>Farm 2</p>
+            <p id="costOfFarmUpgrade">15 Wood <p>10 Stone</p></p>
+        </div>
+    </section>
+    <section id="buildings">
+        <div id="cave" class="custombutton">
             <img src="img/tempHome.png" alt="">
             <p id="nameOfHome">Home</p>
+            <p id="costOfHome">5 Stone</p>
             <p id="homeAmount">0</p>
         </div>
-        <div id="farm" class="buildingbutton">
+        <div id="farm" class="custombutton">
             <img src="img/tempHome.png" alt="">
             <p id="nameOfFarm">Farm</p>
+            <p id="costOfFarm">5 Stone <p>5 Wood</p></p>
             <p id="farmAmount">0</p>
         </div>
-        <div id="mine" class="buildingbutton">
+        <div id="mine" class="custombutton">
             <img src="img/tempHome.png" alt="">
             <p id="nameOfMine">Mine</p>
+            <p id="costOfMine">15 Stone <p>5 Food</p></p>
             <p id="mineAmount">0</p>
         </div>
-    </div>
-    <div id="playerOptions">
-        <button id="Forage">Forage</button>
-    </div>
-
+    </section>
+    <section id="playerOptions">
+        <div id="forage" class="custombutton">
+            <p>Forage</p>
+        </div>
+        <div id="mining" class="custombutton">
+            <p>Mining</p>
+        </div>
+        <div id="woodcutting" class="custombutton">
+            <p>Woodcutting</p>
+        </div>
+    </section>
+<script src="main.js"></script>
 </body>
 </html>
