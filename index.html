@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <p>Colony Management</p>
+        <h1>Colony Management</h1>
     </header>
 
     <div id="game-visual">
@@ -17,24 +17,23 @@
     </div>
 
     <nav id="game-info"> 
-        <span id="Allpeople">0 People</span>
-        <span id="Allstone">0 Stone</span> 
-        <span id="Allfood">0 Food</span>  
-        <span id="Allwood">0 Wood</span> 
+        <span id="Allstone"><span>0 Stone</span><span>0 Stone/second</span></span> 
+        <span id="Allfood"><span>0 Food</span><span>0 Food/second</span></span>  
+        <span id="Allwood"><span>0 Wood</span><span>0 Wood/second</span></span> 
     </nav>
 
     <section id="upgrades">
-        <div id="betterForaging" class="customUpgradebutton">
-            <p>Better Foraging</p>
-            <p id="costOfForageUpgrade">10 Food</p>
-        </div>
-        <div id="hut" class="customUpgradebutton">
-            <p>Hut</p>  
-            <p id="costOfHutUpgrade">10 Wood</p>
-        </div>
         <div id="farm2" class="customUpgradebutton">
             <p>Farm 2</p>
-            <p id="costOfFarmUpgrade">15 Wood <p>10 Stone</p></p>
+            <p id="costOfFarmUpgrade">10 Food</p>
+        </div>
+        <div id="hut" class="customUpgradebutton">
+            <p>Cave 2</p>  
+            <p id="costOfHutUpgrade">10 Wood</p>
+        </div>
+        <div id="mine2" class="customUpgradebutton">
+            <p>Mine 2</p>
+            <p id="costOfMineUpgrade">15 Wood <span>10 Stone</span></p>
         </div>
     </section>
     <section id="buildings">
@@ -47,13 +46,13 @@
         <div id="farm" class="custombutton">
             <img src="img/tempHome.png" alt="">
             <p id="nameOfFarm">Farm</p>
-            <p id="costOfFarm">5 Stone <p>5 Wood</p></p>
+            <p id="costOfFarm"><span>5 Stone</span> <span>5 Wood</span></p>
             <p id="farmAmount">0</p>
         </div>
         <div id="mine" class="custombutton">
             <img src="img/tempHome.png" alt="">
             <p id="nameOfMine">Mine</p>
-            <p id="costOfMine">15 Stone <p>5 Food</p></p>
+            <p id="costOfMine"><span>15 Stone</span> <span>5 Food</span></p>
             <p id="mineAmount">0</p>
         </div>
     </section>
