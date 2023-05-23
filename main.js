@@ -1,8 +1,11 @@
 let forage = document.getElementById("forage")
 let custombutton = document.querySelectorAll(".custombutton")
 let customUpgradebutton = document.querySelectorAll(".customUpgradebutton")
+let buttonList = document.getElementsByClassName("buttonList")
+let custombuttonList = document.querySelectorAll(".custombuttonList")
+let gameVisual =  document.getElementById("game-visual")
 
-console.log(custombutton)
+// console.log(custombutton)
 
 // Resources
 let wood = document.getElementById("Allwood").firstElementChild
@@ -61,27 +64,62 @@ let homeUpgradeAmount = 0;
 let costOfMineUpgrade = Number(document.getElementById("costOfMineUpgrade").innerHTML.split(" ")[0])
 let mineUpgradeAmount = 0;
 
+console.log(custombuttonList[1]);
 
-custombutton[3].addEventListener("click", function playerClickForage(){
+custombuttonList[0].addEventListener("click", function displayUpgrades(){
+    
+    document.getElementById("upgrades").style.display = "flex";
+    document.getElementById("buildings").style.display = "none";
+    document.getElementById("playerOptions").style.display = "none";
+
+})
+
+custombuttonList[1].addEventListener("click", function displayBuildings(){
+    
+    document.getElementById("buildings").style.display = "flex";
+    document.getElementById("upgrades").style.display = "none";
+    document.getElementById("playerOptions").style.display = "none";
+
+})
+
+
+custombuttonList[2].addEventListener("click", function displayPlayerOptions(){
+    
+    document.getElementById("playerOptions").style.display = "flex";
+    document.getElementById("buildings").style.display = "none";
+    document.getElementById("upgrades").style.display = "none";
+})
+
+console.log(custombuttonList);
+
+console.log(custombutton);
+
+
+function replaceWithGif() {
+    gameVisual.innerHTML = '<img src="img/rickyboi.gif" alt="Rick Astley Dancing">';
+}
+  
+
+custombutton[6].addEventListener("click", function playerClickForage(){
     foodAmount = foodAmount + foodClickPower;
     let foodString = food.innerHTML.split(" ")[1];
     food.innerHTML = `${foodAmount}` + ' ' + foodString;     
 })
 
-custombutton[4].addEventListener("click", function playerClickMine(){
+custombutton[7].addEventListener("click", function playerClickMine(){
     stoneAmount = stoneAmount + mineClickPower;
     let stoneString = stone.innerHTML.split(" ")[1];
     stone.innerHTML = `${stoneAmount}` + ' ' + stoneString;
 })
 
-custombutton[5].addEventListener("click", function playerClickWoodCut(){
+custombutton[8].addEventListener("click", function playerClickWoodCut(){
     woodAmount = woodAmount + woodClickPower;
     let woodString = wood.innerHTML.split(" ")[1];
     wood.innerHTML = `${woodAmount}` + ' ' + woodString; 
 })
 
 
-custombutton[0].addEventListener("click", function buyCave(){
+custombutton[3].addEventListener("click", function buyCave(){
     let stoneString = stone.innerHTML.split(" ")[1];
     let costOfHomeString = wholeCostOfHome.innerHTML.split(" ")[1];
     if (stoneAmount >= costOfHome) {
@@ -96,7 +134,7 @@ custombutton[0].addEventListener("click", function buyCave(){
     }
 })
 
-custombutton[1].addEventListener("click", function buyFarm(){
+custombutton[4].addEventListener("click", function buyFarm(){
     let stoneString = stone.innerHTML.split(" ")[1];
     let woodString = wood.innerHTML.split(" ")[1];
     if (woodAmount >= costOfFarmWood && stoneAmount >= costOfFarmStone){
@@ -117,7 +155,7 @@ custombutton[1].addEventListener("click", function buyFarm(){
 
 })
 
-custombutton[2].addEventListener("click", function buyMine(){
+custombutton[5].addEventListener("click", function buyMine(){
     let stoneString = stone.innerHTML.split(" ")[1];
     let foodString = food.innerHTML.split(" ")[1];
     if (stoneAmount >= costOfMineStone && foodAmount >= costOfMineFood){
@@ -158,7 +196,7 @@ function ScoreWoodPerSecond(){
     homeUpgrade()
 }
 
-console.log(customUpgradebutton);
+// console.log(customUpgradebutton);
 
 customUpgradebutton[0].addEventListener("click", function farmUpgrade() {
     let foodString = food.innerHTML.split(" ")[1];

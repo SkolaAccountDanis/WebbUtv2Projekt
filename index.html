@@ -12,7 +12,7 @@
         <h1>Colony Management</h1>
     </header>
 
-    <div id="game-visual">
+    <div id="game-visual" onclick="replaceWithGif()">
         <p>placeholder</p>
     </div>
 
@@ -21,7 +21,11 @@
         <span id="Allfood"><span>0 Food</span><span>0 Food/second</span></span>  
         <span id="Allwood"><span>0 Wood</span><span>0 Wood/second</span></span> 
     </nav>
-
+    <section id="buttonList">
+        <div id="buttonForListUpgrades"class="custombutton custombuttonList"><p>Upgrades</p></div>
+        <div id="buttonForListBuildings" class="custombutton custombuttonList"><p>Buildings</p></div>
+        <div id="buttonForListPlayer"class="custombutton custombuttonList"><p>Player</p></div>
+    </section>
     <section id="upgrades">
         <div id="farm2" class="customUpgradebutton">
             <p>Farm 2</p>
@@ -56,17 +60,17 @@
             <p id="mineAmount">0</p>
         </div>
     </section>
-    <section id="playerOptions">
-        <div id="forage" class="custombutton">
-            <p>Forage</p>
-        </div>
-        <div id="mining" class="custombutton">
-            <p>Mining</p>
-        </div>
-        <div id="woodcutting" class="custombutton">
-            <p>Woodcutting</p>
-        </div>
-    </section>
+        <section id="playerOptions">
+            <div id="forage" class="custombutton">
+                <p>Forage</p>
+            </div>
+            <div id="mining" class="custombutton">
+                <p>Mining</p>
+            </div>
+            <div id="woodcutting" class="custombutton">
+                <p>Woodcutting</p>
+            </div>
+        </section>
 <script src="main.js"></script>
 </body>
 </html>
