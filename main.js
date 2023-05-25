@@ -66,29 +66,41 @@ let mineUpgradeAmount = 0;
 
 console.log(custombuttonList[1]);
 
-custombuttonList[0].addEventListener("click", function displayUpgrades(){
-    
-    document.getElementById("upgrades").style.display = "flex";
-    document.getElementById("buildings").style.display = "none";
-    document.getElementById("playerOptions").style.display = "none";
+function updateDisplay() {
+    if (window.innerWidth <= 400){
+        custombuttonList[0].addEventListener("click", function displayUpgrades(){
+            
+            document.getElementById("upgrades").style.display = "flex";
+            document.getElementById("buildings").style.display = "none";
+            document.getElementById("playerOptions").style.display = "none";
 
-})
+        })
 
-custombuttonList[1].addEventListener("click", function displayBuildings(){
-    
-    document.getElementById("buildings").style.display = "flex";
-    document.getElementById("upgrades").style.display = "none";
-    document.getElementById("playerOptions").style.display = "none";
+        custombuttonList[1].addEventListener("click", function displayBuildings(){
+            
+            document.getElementById("buildings").style.display = "grid";
+            document.getElementById("upgrades").style.display = "none";
+            document.getElementById("playerOptions").style.display = "none";
 
-})
+        })
 
+        custombuttonList[2].addEventListener("click", function displayPlayerOptions(){
+            
+            document.getElementById("playerOptions").style.display = "flex";
+            document.getElementById("buildings").style.display = "none";
+            document.getElementById("upgrades").style.display = "none";
+        })
+    } else{
+        document.getElementById("playerOptions").style.visibility = "show";
+        document.getElementById("buildings").style.display = "flex";
+        document.getElementById("upgrades").style.display = "grid";
+    }
+}
 
-custombuttonList[2].addEventListener("click", function displayPlayerOptions(){
-    
-    document.getElementById("playerOptions").style.display = "flex";
-    document.getElementById("buildings").style.display = "none";
-    document.getElementById("upgrades").style.display = "none";
-})
+updateDisplay();
+
+// Update display on window resize
+window.addEventListener("resize", updateDisplay);
 
 console.log(custombuttonList);
 
